@@ -1,4 +1,4 @@
-import { test, expect } from '../playwright/fixtures';
+import { test, expect } from '../../playwright/fixtures';
 
 test('Change greeting on button click', async ({ context, extensionId }) => {
   const page = await context.newPage();

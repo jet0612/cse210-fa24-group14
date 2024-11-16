@@ -1,4 +1,4 @@
-import { test, expect } from '../playwright/fixtures'; 
+import { test, expect } from '../../playwright/fixtures'; 
 
 test('E2E Test: Open extension popup, display greeting, and modify it on button click', async ({ context, extensionId }) => {
   const page = await context.newPage();
