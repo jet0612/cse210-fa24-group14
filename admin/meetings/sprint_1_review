@@ -13,8 +13,9 @@ CI/CD
           palywright: create instance of browser, go to our extension, 
           dynamicly fetch extension ID
           why background and JS? interact with the website you are on, need a background worker
-      
-          
+
+ merge right now after the meeting, push the test
+ 004 has conflicts
   
   
           
