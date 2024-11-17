@@ -16,8 +16,8 @@ test-generic:
 
 .PHONY: test-unit
 test-unit:
-	@npx playwright test --project=unit
+	@$(MAKE) test-generic suite=unit
 
 .PHONY: test-e2e
 test-e2e:
-	@npx playwright test --project=e2e
+	@$(MAKE) test-generic suite=e2e
