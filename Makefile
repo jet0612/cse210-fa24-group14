@@ -4,6 +4,12 @@ install:
 	@npm install
 	@npx playwright install chromium
 
+.PHONY: test-code-quality
+test-code-quality:
+	@echo "🧪 Checking code quality"
+	@npx eslint --fix-dry-run
+
+
 .PHONY: test-generic
 test-generic:
 	@echo "🧪 $(suite) tests"
