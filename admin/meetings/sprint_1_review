@@ -8,5 +8,13 @@ CI/CD
           run install without dependency
           dry run? reason: if you fix it, CI will pass.
 
+  Shyam:  basic merge, everyone could review
+  Rashi:  rough HTML; test extension to add test with button, put into browser
+          palywright: create instance of browser, go to our extension, 
+          dynamicly fetch extension ID
+          why background and JS? interact with the website you are on, need a background worker
+      
           
+  
+  
           
