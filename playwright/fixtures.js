@@ -5,7 +5,8 @@ import { chromium, test as base } from '@playwright/test';
 import path from 'path';
 
 export const test = base.extend({
-  context: async (_, use) => {
+  // eslint-disable-next-line no-empty-pattern
+  context: async ({}, use) => {
     const pathToExtension = path.resolve(__dirname, '../');
     const context = await chromium.launchPersistentContext('', {
       headless: false,
