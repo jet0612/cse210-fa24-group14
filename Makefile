@@ -7,7 +7,7 @@ install:
 .PHONY: test-code-quality
 test-code-quality:
 	@echo "🧪 Checking code quality"
-	@npx eslint --fix-dry-run
+	@npx eslint
 
 .PHONY: test-generic
 test-generic:
