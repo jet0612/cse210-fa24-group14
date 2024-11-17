@@ -5,9 +5,17 @@ on:
   pull_request:
     paths:
       - ".github/workflow/ci.tests.yaml"
-      - "index.js"
+      - "src/**"
       - "tests/**"
       - "Makefile"
+  push:
+    branches:
+      - "main"
+    paths-ignore:
+      - "src/assets/**"
+      - "admin/**"
+      - "specs/**"
+      - "**/*.md"
 
 jobs:
   tests:

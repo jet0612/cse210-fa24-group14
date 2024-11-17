@@ -1,14 +1,17 @@
 {
-    "manifest_version": 3,
-    "name": "Test Extension",
-    "version": "1.0",
-    "description": "A simple Chrome extension for testing",
-    "permissions": ["storage"],
-    "action": {
-      "default_popup": "index.html",
-      "default_title": "Quick Notes - Test Extension"
-    },
-    "background": {
-      "service_worker": "background.js"
-    }
-}  
+  "manifest_version": 3,
+  "name": "Quick Notes",
+  "version": "1.0",
+  "description": "A simple note-taking Chrome extension.",
+  "action": {
+    "default_popup": "src/entry.html",
+    "default_icon": "src/assets/dev_diary.png"
+  },
+  "permissions": ["storage"],
+  "content_security_policy": {
+  "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  "background": {
+    "service_worker": "src/js/background.js"
+  }
+}
