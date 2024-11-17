@@ -11,9 +11,8 @@ test('Change greeting on button click', async ({ context, extensionId }) => {
 
   // Click the button to change the greeting
   await page.click('#changeGreetingBtn');
-  
+
   // Ensure the greeting changes
   const changedGreeting = await page.textContent('#greeting');
   expect(changedGreeting).toBe('Testing with Playwright!');
 });
-

@@ -10,9 +10,9 @@ module.exports = {
         headless: false,
         args: [
           `--disable-extensions-except=${path.resolve(__dirname)}`,
-          `--load-extension=${path.resolve(__dirname)}`
-        ]
-      }
+          `--load-extension=${path.resolve(__dirname)}`,
+        ],
+      },
     },
     {
       name: 'e2e', // Project for E2E tests
@@ -22,9 +22,9 @@ module.exports = {
         headless: false, // We need a visible browser for E2E tests
         args: [
           `--disable-extensions-except=${path.resolve(__dirname)}`,
-          `--load-extension=${path.resolve(__dirname)}`
-        ]
-      }
-    }
-  ]
+          `--load-extension=${path.resolve(__dirname)}`,
+        ],
+      },
+    },
+  ],
 };
