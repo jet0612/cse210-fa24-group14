@@ -1,0 +1,38 @@
+name: "CI: Run Tests"
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - ".github/workflow/ci.tests.yaml"
+      - "index.js"
+      - "tests/**"
+      - "Makefile"
+
+jobs:
+  tests:
+    runs-on: ${{ matrix.test.runner || 'ubuntu-22.04' }}
+    name: ${{ matrix.test.name }}
+    timeout-minutes: 5
+    continue-on-error: false
+    strategy:
+      fail-fast: false
+      matrix:
+        test:
+          - name: unit
+          - name: e2e
+
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: make install
+
+      - name: Run tests
+        run: make test-${{ matrix.test.name }}
