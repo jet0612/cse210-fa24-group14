@@ -1,1 +1,12 @@
+CI/CD
+  Mitch:  pr linting: check mismatch variable errors in code
+            take care of commit message
+          automatic detect error
+          code quality, end to end, unit test
+          rashi set up unit test
+          make file added
+          run install without dependency
+          dry run? reason: if you fix it, CI will pass.
 
+          
+          
